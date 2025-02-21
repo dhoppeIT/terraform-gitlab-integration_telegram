@@ -61,8 +61,13 @@ variable "wiki_page_events" {
 
 variable "branches_to_be_notified" {
   type        = string
-  default     = null
+  default     = "default"
   description = "Branches to send notifications for"
+
+  validation {
+    condition     = contains(["all", "default", "protected", "default_and_protected"], var.branches_to_be_notified)
+    error_message = "Valid values are all, default, protected, default_and_protected"
+  }
 }
 
 variable "notify_only_broken_pipelines" {

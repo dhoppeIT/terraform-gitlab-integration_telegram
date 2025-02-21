@@ -12,7 +12,7 @@ specify the required variables and run the command `terraform init`.
 ```hcl
 module "gitlab_integration_telegram" {
   source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-integration_telegram/local"
-  version = "1.0.0"
+  version = "1.0.1"
 
   confidential_issues_events = false
   confidential_note_events   = false
@@ -57,7 +57,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_branches_to_be_notified"></a> [branches\_to\_be\_notified](#input\_branches\_to\_be\_notified) | Branches to send notifications for | `string` | `null` | no |
+| <a name="input_branches_to_be_notified"></a> [branches\_to\_be\_notified](#input\_branches\_to\_be\_notified) | Branches to send notifications for | `string` | `"default"` | no |
 | <a name="input_confidential_issues_events"></a> [confidential\_issues\_events](#input\_confidential\_issues\_events) | Enable notifications for confidential issues events | `bool` | n/a | yes |
 | <a name="input_confidential_note_events"></a> [confidential\_note\_events](#input\_confidential\_note\_events) | Enable notifications for confidential note events | `bool` | n/a | yes |
 | <a name="input_issues_events"></a> [issues\_events](#input\_issues\_events) | Enable notifications for issues events | `bool` | n/a | yes |
