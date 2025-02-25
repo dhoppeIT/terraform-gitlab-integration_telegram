@@ -11,7 +11,7 @@ specify the required variables and run the command `terraform init`.
 
 ```hcl
 module "gitlab_integration_telegram" {
-  source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-integration_telegram/local"
+  source  = "gitlab.com/terraform-child-modules-48151/terraform-gitlab-integration-telegram/local"
   version = "1.0.1"
 
   confidential_issues_events = false
